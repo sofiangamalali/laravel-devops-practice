@@ -167,3 +167,4 @@ When PostgreSQL or Redis is down, connections timeout within ~3 seconds and retu
 
 - Database failure: `{"error": "database_unavailable"}` (HTTP 503)
 - Redis failure: `{"error": "redis_unavailable"}` (HTTP 503)
+- Test
