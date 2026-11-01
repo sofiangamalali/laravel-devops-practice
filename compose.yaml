@@ -4,6 +4,7 @@ services:
     image: laravel-notes:dev
     init: true
     env_file: .env
+    restart: on-failure
     depends_on:
       postgres:
         condition: service_healthy
