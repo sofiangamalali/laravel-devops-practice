@@ -1,0 +1,26 @@
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  app:
+    restart: on-failure
+    mem_limit: 256m
+    cpus: 0.5
+    logging: *default-logging
+  nginx:
+    ports:
+      - "127.0.0.1:8080:80"
+    mem_limit: 64m
+    cpus: 0.25
+    logging: *default-logging
+  postgres:
+    mem_limit: 512m
+    cpus: 0.5
+    logging: *default-logging
+  redis:
+    mem_limit: 128m
+    cpus: 0.25
+    logging: *default-logging
