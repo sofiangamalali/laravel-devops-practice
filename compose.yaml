@@ -1,6 +1,7 @@
+name: laravel-devops-practice
 services:
   app:
-    image: laravel-notes:${APP_TAG:-dev}
+    image: ghcr.io/sofiangamalali/laravel-devops-practice:${APP_TAG:-dev}
     init: true
     env_file: .env
     depends_on:
